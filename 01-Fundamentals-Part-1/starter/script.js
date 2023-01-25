@@ -66,4 +66,6 @@ Conversion - Converts explicitly
     e.g. converting string to number before doing any operations (Number('1991') + 12)
 Coercion - JS does the change automatically
     e.g. adding string and number.
+    -,*,/ and other operations that are not + will try to coerce into the data type that it can handle (Cannot multiple, divide, or subtract strings)
 */
+console.log(String(23), 23);
