@@ -27,18 +27,32 @@ Symbol - Value that is unique and cannot be changed
 BigInt - Larger integers than the Number type can hold
 */
 
+//Practice Assignment
+const country = 'Philippines';
+const continent = 'Asia';
+console.log(`${country}, ${continent}`); //should show the assigned strings/text
+
+const isIsland = true; //should show as boolean type
+let population; //should show as undefined type
+console.log(typeof isIsland, typeof population, typeof country);
+
+/*Operator Precedence
+Check MDN for precedence of operators
+*/
 //Code Challenge #1 (practice variables and)
 const markWeight = 78;
 const markHeight = 1.69;
 const johnWeight = 95;
 const johnHeight = 1.88;
 
+//Takes in two numbers
 let calculateBMI = (weight, height) => weight/ height ** 2;
 
+//Calculate BMI with 2 decimal places
 const markBMI = Math.round(calculateBMI(markWeight, markHeight) * 100) / 100 ;
 const johnBMI = Math.round(calculateBMI(johnWeight, johnHeight) * 100) / 100 ;
 
 console.log(`Mark: ${markBMI} - John: ${johnBMI}`);
 
-//Code Challenge #2 (if statement or conditional to look for true/false conditions)
+//Code Challenge #2 (if statement or conditional to look for true/false conditions) and use template literals for values
 console.log(markBMI > johnBMI? `Mark's BMI is higher at ${markBMI}`: `John's BMI is higher at ${johnBMI}`);
