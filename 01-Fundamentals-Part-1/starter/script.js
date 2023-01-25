@@ -54,5 +54,16 @@ const johnBMI = Math.round(calculateBMI(johnWeight, johnHeight) * 100) / 100 ;
 
 console.log(`Mark: ${markBMI} - John: ${johnBMI}`);
 
+/* Template Literals (Backticks)
+-no need for \n\ to add new line (regular single and double quotes need it)
+*/
+
 //Code Challenge #2 (if statement or conditional to look for true/false conditions) and use template literals for values
 console.log(markBMI > johnBMI? `Mark's BMI is higher at ${markBMI}`: `John's BMI is higher at ${johnBMI}`);
+
+/* Type Conversion v. Coercion
+Conversion - Converts explicitly
+    e.g. converting string to number before doing any operations (Number('1991') + 12)
+Coercion - JS does the change automatically
+    e.g. adding string and number.
+*/
