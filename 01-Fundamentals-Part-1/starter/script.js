@@ -96,11 +96,11 @@ console.log(`The average score of Koalas is ${avgKoalas}`);
 //If both teams are higher than 100 and have the same score, it's a draw
 //If both teams have lower than 100 score, nobody wins
 
-if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins === avgKoalas){
+if(avgDolphins > 100 && avgDolphins === avgKoalas){
     console.log(`It's a draw between the Dolphins and Koalas!`);
-}else if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins > avgKoalas){
+}else if(avgDolphins > avgKoalas && avgDolphins > 100){
     console.log(`The Dolphins win with an average of ${avgDolphins}!`);
-}else if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins < avgKoalas){
+}else if(avgDolphins < avgKoalas && avgKoalas > 100){
     console.log(`The Koalas win with an average of ${avgKoalas}!`);
 }else{
     console.log(`Nobody won as both teams did not reach the minimum score of 100`);
