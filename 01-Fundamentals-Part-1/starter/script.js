@@ -14,7 +14,7 @@ Hard Rules:
 const firstName = 'Daniel'
 const lastName = 'Desiatco'
 
-console.log(`My name is ${lastName}, ${firstName}`);
+//console.log(`My name is ${lastName}, ${firstName}`);
 
 /* PRIMITIVE DATA TYPES
 Number - Floating point numbers
@@ -52,14 +52,14 @@ let calculateBMI = (weight, height) => weight/ height ** 2;
 const markBMI = Math.round(calculateBMI(markWeight, markHeight) * 100) / 100 ;
 const johnBMI = Math.round(calculateBMI(johnWeight, johnHeight) * 100) / 100 ;
 
-console.log(`Mark: ${markBMI} - John: ${johnBMI}`);
+//console.log(`Mark: ${markBMI} - John: ${johnBMI}`);
 
 /* Template Literals (Backticks)
 -no need for \n\ to add new line (regular single and double quotes need it)
 */
 
 //Code Challenge #2 (if statement or conditional to look for true/false conditions) and use template literals for values
-console.log(markBMI > johnBMI? `Mark's BMI is higher at ${markBMI}`: `John's BMI is higher at ${johnBMI}`);
+//console.log(markBMI > johnBMI? `Mark's BMI is higher at ${markBMI}`: `John's BMI is higher at ${johnBMI}`);
 
 /* Type Conversion v. Coercion
 Conversion - Converts explicitly
@@ -68,4 +68,40 @@ Coercion - JS does the change automatically
     e.g. adding string and number.
     -,*,/ and other operations that are not + will try to coerce into the data type that it can handle (Cannot multiple, divide, or subtract strings)
 */
-console.log(String(23), 23);
+//console.log(String(23), 23);
+
+//Coding Challenge #3
+
+//Create two gymnastics teams - Dolphines and Koalas with 3 scores each
+const dolphins = [96,108,89,300];
+const koalas = [88,91,110,400];
+
+//get the average of their scores and announce the winner in the console.
+
+//function to calculate the average of an array
+const getAvg = numAr => {
+    let total = 0;//set initial total variable
+    numAr.forEach((num) => {
+        total+= num;
+    })//forEach to add everything to total
+    return total/(numAr.length)
+}
+const avgDolphins = getAvg(dolphins);
+const avgKoalas = getAvg(koalas);
+console.log(`The average score of Dolphins is ${avgDolphins}`);
+console.log(`The average score of Koalas is ${avgKoalas}`);
+
+//Check the winner based on who got the higher average.
+//Teams can only win if the average is higher than 100
+//If both teams are higher than 100 and have the same score, it's a draw
+//If both teams have lower than 100 score, nobody wins
+
+if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins === avgKoalas){
+    console.log(`It's a draw between the Dolphins and Koalas!`);
+}else if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins > avgKoalas){
+    console.log(`The Dolphins win with an average of ${avgDolphins}!`);
+}else if(avgDolphins > 100 && avgKoalas > 100 && avgDolphins < avgKoalas){
+    console.log(`The Koalas win with an average of ${avgKoalas}!`);
+}else{
+    console.log(`Nobody won as both teams did not reach the minimum score of 100`);
+}
