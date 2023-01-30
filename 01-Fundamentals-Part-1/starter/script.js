@@ -105,3 +105,26 @@ if(avgDolphins > 100 && avgDolphins === avgKoalas){
 }else{
     console.log(`Nobody won as both teams did not reach the minimum score of 100`);
 }
+
+//You can use ternary operator inside of a template literal to be able to add logic since it is an expresion and not a statement (if)
+//Ternary operators do not work for big blocks of codes - it is not a substitute to if statements
+
+/* Coding Challenge #4
+Build a tip calculator.
+*/
+//Usual tip is 15% if the bill is 50-300, 20% if any other value
+let bill = [275, 40, 430];
+const USUAL_TIP = .15;
+const OTHER_TIP = .2;
+
+//create a function to calculate tips based on the value
+const calculateTip = (billVal) => {
+    //Decide how much tip to give
+    let tip = billVal>= 50 && billVal <=300? USUAL_TIP : OTHER_TIP;
+    //Calculate tip value
+    let tipVal = billVal * tip;
+    //Log the total calculations
+    console.log(`The bill is $${billVal} and the tip is ${tip * 100}% which is $${tipVal} for a grand total of $${billVal + tipVal}`);
+}
+//run all values using forEach
+bill.forEach(calculateTip)
